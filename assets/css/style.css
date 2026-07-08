@@ -9,10 +9,19 @@
 
 body{
     display: flex;
+    width: 100dvw;
+    height: 100dvh;
+
+}
+
+h1{
+    display: flex;
+    text-align: center;
+    justify-content: center;
 }
 
 .itens-barra{
-    color: black;
+    color: white;
     text-decoration: none;
     display: flex;
     flex-direction: column;
@@ -21,14 +30,14 @@ body{
 
 .itens-barra:hover{
     border-radius: 10px;
-    background-color: rgba(255, 255, 30, 0.89)
+    background-color: rgba(255, 68, 0, 0.655)
 }
 
 .barra-lateral{
     width: 50px;
-    background-color: #14192b;
-    color: #eee;
+    background-color: rgb(53, 14, 53);
     display: flex;
+    color: white;
     flex-direction: column;
     padding: 20px 0px;
     border-top: 15px;
