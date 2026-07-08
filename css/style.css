@@ -1,0 +1,57 @@
+/* Reset */
+*, 
+*::before, 
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+    display: flex;
+}
+
+.itens-barra{
+    color: black;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.itens-barra:hover{
+    border-radius: 10px;
+    background-color: rgba(255, 255, 30, 0.89)
+}
+
+.barra-lateral{
+    width: 50px;
+    background-color: #14192b;
+    color: #eee;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0px;
+    border-top: 15px;
+    border-bottom-right-radius: 15px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.barra-lateral:hover{
+    width: 200px;
+}
+
+.header-barra{
+    display: flex;
+}
+
+.header-barra > h3{
+    margin-top: 5px;
+}
+
+.header-barra > img {
+    width: 50px;
+    padding: 0px 10px;
+
+}
+
