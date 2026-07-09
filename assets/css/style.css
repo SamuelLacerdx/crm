@@ -82,8 +82,7 @@ h1 {
   gap: 20px;
   padding: 50px;
   justify-content: center;
-    align-content: flex-start; /* evita que as linhas se espalhem pela altura toda */
-
+  align-content: flex-start; /* evita que as linhas se espalhem pela altura toda */
 }
 
 .caixa-dashboard {
