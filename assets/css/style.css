@@ -1,68 +1,106 @@
 /* Reset */
-*, 
-*::before, 
+*,
+*::before,
 *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-body{
-    display: flex;
-    width: 100dvw;
-    height: 100dvh;
-
+body {
+  display: flex;
+  width: 100dvw;
+  height: 100dvh;
+  /* align-items: flex-start; */
 }
 
-h1{
-    display: flex;
-    text-align: center;
-    justify-content: center;
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
-.itens-barra{
-    color: white;
-    text-decoration: none;
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
+h1 {
+  display: flex;
+  margin: 0px 0px 10px 40px;
+  margin-top: 30px;
+  font-size: 20px;
 }
 
-.itens-barra:hover{
-    border-radius: 10px;
-    background-color: rgba(255, 68, 0, 0.655)
+.itens-barra {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
 }
 
-.barra-lateral{
-    width: 50px;
-    background-color: rgb(53, 14, 53);
-    display: flex;
-    color: white;
-    flex-direction: column;
-    padding: 20px 0px;
-    border-top: 15px;
-    border-bottom-right-radius: 15px;
-    overflow: hidden;
-    transition: 0.5s;
+.itens-barra:hover {
+  border-radius: 10px;
+  background-color: rgba(255, 68, 0, 0.655);
 }
 
-.barra-lateral:hover{
-    width: 200px;
+.barra-lateral {
+  width: 50px;
+  background-color: rgb(53, 14, 53);
+  display: flex;
+  color: white;
+  flex-direction: column;
+  padding: 20px 0px;
+  border-top: 15px;
+  border-bottom-right-radius: 15px;
+  overflow: hidden;
+  transition: 0.5s;
 }
 
-.header-barra{
-    display: flex;
+.barra-lateral:hover {
+  width: 200px;
 }
 
-.header-barra > h3{
-    margin-top: 5px;
+.header-barra {
+  display: flex;
+  padding-bottom: 10px;
+}
+
+.header-barra > h3 {
+  margin-top: 5px;
 }
 
 .header-barra > img {
-    width: 50px;
-    padding: 0px 10px;
-    border-radius: 30%;
-    object-fit: cover;
+  width: 50px;
+  padding: 0px 10px;
+  border-radius: 30%;
+  object-fit: cover;
+}
+
+.container-dashboard {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+  width: 100%;
+  gap: 20px;
+  padding: 50px;
+  justify-content: center;
+    align-content: flex-start; /* evita que as linhas se espalhem pela altura toda */
 
 }
 
+.caixa-dashboard {
+  width: calc(25% - 50px); /* 4 caixas por linha */
+  height: 120px;
+  background-color: rgb(53, 14, 53);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+.caixa-dashboard > h2 {
+  margin-top: 10px;
+}
+
+.caixa-dashboard > p {
+  font-size: 20px;
+  padding: 20px;
+}
