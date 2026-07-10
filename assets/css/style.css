@@ -11,60 +11,35 @@ body {
   display: flex;
   width: 100dvw;
   height: 100dvh;
-  /* align-items: flex-start; */
 }
 
 main {
   width: 100%;
-  display: flex;
-  flex-direction: column;
   flex: 1;
-}
-
-h1 {
-  display: flex;
-  margin: 0px 0px 10px 40px;
-  margin-top: 30px;
-  font-size: 20px;
-}
-
-.itens-barra {
-  color: white;
-  text-decoration: none;
   display: flex;
   flex-direction: column;
-  padding: 20px;
-}
-
-.itens-barra:hover {
-  border-radius: 10px;
-  background-color: rgba(255, 68, 0, 0.655);
 }
 
 .barra-lateral {
-  width: 50px;
-  background-color: rgb(53, 14, 53);
-  display: flex;
-  color: white;
-  flex-direction: column;
+  width: 50px; 
   padding: 20px 0px;
-  border-top: 15px;
+  background-color: rgb(53, 14, 53);
+  color: white;
+  display: flex;
+  flex-direction: column;
   border-bottom-right-radius: 15px;
   overflow: hidden;
-  transition: 0.5s;
+  transition: 0.5s; /* anima a abertura/fechamento do menu */
 }
 
 .barra-lateral:hover {
   width: 200px;
 }
 
+/* Cabeçalho da barra: logo + nome do sistema */
 .header-barra {
   display: flex;
   padding-bottom: 10px;
-}
-
-.header-barra > h3 {
-  margin-top: 5px;
 }
 
 .header-barra > img {
@@ -74,13 +49,56 @@ h1 {
   object-fit: cover;
 }
 
-.container-dashboard {
+.header-barra > h3 {
+  margin-top: 5px;
+}
+
+/* Links do menu lateral */
+.itens-barra {
+  padding: 15px 1px;
+  color: white;
+  text-decoration: none;
   display: flex;
-  flex-wrap: wrap;
+  font-size: 15px;
+  flex-direction: row;      /* mudou de column para row */
+  align-items: center;      /* alinha verticalmente svg e texto */
+  gap: 10px;                /* espaço entre o ícone e o texto */
+}
+
+.itens-barra > svg {
+  flex-shrink: 0;           /* impede o ícone de ser espremido/cortado */
+  width: 50px;
+  height: 30px;
+}
+
+
+.itens-barra:hover {
+  border-radius: 10px;
+  background-color: rgba(255, 68, 0, 0.655);
+}
+
+.bem-vindo {
+  display: flex;
+  flex-direction: column;
+}
+
+.bem-vindo > h1 {
+  margin: 30px 0px 10px 40px;
+  font-size: 20px;
+}
+
+.bem-vindo > p {
+  margin: 0px 0px 10px 40px;
+  font-size: 15px;
+}
+
+.container-dashboard {
   flex: 1;
   width: 100%;
-  gap: 20px;
   padding: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
   justify-content: center;
   align-content: flex-start; /* evita que as linhas se espalhem pela altura toda */
 }
@@ -90,16 +108,17 @@ h1 {
   height: 120px;
   background-color: rgb(53, 14, 53);
   border-radius: 10px;
+  color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: white;
 }
+
 .caixa-dashboard > h2 {
   margin-top: 10px;
 }
 
 .caixa-dashboard > p {
-  font-size: 20px;
   padding: 20px;
+  font-size: 20px;
 }
