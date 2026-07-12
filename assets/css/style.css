@@ -136,3 +136,33 @@ main {
   justify-content: center;
   font-size: 18px;
 }
+
+.tela-lead{
+  display: flex;
+  width: 100%;
+  flex: 1;
+}
+
+.topo-lead{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* empurra o único item (botão) pra direita */
+  position: relative;
+  width: 100%;
+  padding: 15px 20px 0px 20px;
+}
+
+.add-lead{
+  display: flex;
+  justify-content: end;
+}
+
+.barra-procura{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
