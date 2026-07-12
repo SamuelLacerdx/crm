@@ -153,15 +153,26 @@ main {
   width: 100%;
   padding: 15px 20px 0px 20px;
 }
-
 .topo-lead h1{
   margin: 0;
   font-size: 22px;
+  color: #5b21b6;
 }
 
 .add-lead{
   display: flex;
-  justify-content: end;
+  justify-content: end;  
+}
+
+.add-lead button,
+.add-lead a{
+  background-color: #6d28d9;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
 }
 
 .barra-procura{
@@ -172,8 +183,20 @@ main {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+  border: 1px solid #d8b4fe;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #faf5ff;
 }
 
+.barra-procura input{
+  border: 1px solid #e9d5ff;
+  border-radius: 5px;
+  padding: 6px 10px;
+  outline: none;
+}
+
+/* Cards Leads */
 .container-leads {
   margin-top: 30px;
   display: grid;
@@ -185,8 +208,23 @@ main {
 .caixa-lead{
   width: 80%; /* controla o tamanho da caixa dentro da coluna */
   max-width: 200px; /* trava um limite máximo, se quiser */
-  border: 1px solid #ddd;
+  border: 1px solid #7c3aed;
+  background-color: #7c3aed;
+  color: white;
   border-radius: 8px;
   padding: 15px;
   text-align: center;
+}
+
+.caixa-lead > a {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 4px;
+  background-color: #4c1d95;
+  text-decoration: none;
+  color: white;
+}
+
+.caixa-lead p {
+  margin: 8px 0;
 }
