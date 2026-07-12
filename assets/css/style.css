@@ -29,14 +29,13 @@ main {
   flex-direction: column;
   border-bottom-right-radius: 15px;
   overflow: hidden;
-  transition: 0.5s; /* anima a abertura/fechamento do menu */
+  transition: 0.5s;
 }
 
 .barra-lateral:hover {
   width: 200px;
 }
 
-/* Cabeçalho da barra: logo + nome do sistema */
 .header-barra {
   display: flex;
   padding-bottom: 10px;
@@ -53,24 +52,22 @@ main {
   margin-top: 5px;
 }
 
-/* Links do menu lateral */
 .itens-barra {
   padding: 15px 1px;
   color: white;
   text-decoration: none;
   display: flex;
   font-size: 15px;
-  flex-direction: row;      /* mudou de column para row */
-  align-items: center;      /* alinha verticalmente svg e texto */
-  gap: 10px;                /* espaço entre o ícone e o texto */
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
 }
 
 .itens-barra > svg {
-  flex-shrink: 0;           /* impede o ícone de ser espremido/cortado */
+  flex-shrink: 0;
   width: 50px;
   height: 30px;
 }
-
 
 .itens-barra:hover {
   border-radius: 10px;
@@ -92,26 +89,32 @@ main {
   font-size: 15px;
 }
 
+/* Container principal do dashboard: grid de caixas + gráfico lado a lado */
 .container-dashboard {
   flex: 1;
   width: 100%;
   padding: 50px;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
   gap: 20px;
-  justify-content: center;
-  align-content: flex-start; /* evita que as linhas se espalhem pela altura toda */
+}
+
+/* Grid 2x2 com as 4 caixas */
+.grid-caixas {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px;
 }
 
 .caixa-dashboard {
-  width: calc(25% - 50px); /* 4 caixas por linha */
-  height: 120px;
   background-color: rgb(53, 14, 53);
   border-radius: 10px;
   color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 .caixa-dashboard > h2 {
@@ -121,4 +124,15 @@ main {
 .caixa-dashboard > p {
   padding: 20px;
   font-size: 20px;
+}
+
+/* Quadrado do gráfico ao lado */
+.grafico-caixa {
+  background-color: rgb(53, 14, 53);
+  border-radius: 10px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
 }
