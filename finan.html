@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Lacerdx-Financeiro</title>
   </head>
   <body>
@@ -57,7 +57,7 @@
           </svg>
           Leads</a
         >
-        <a href="#" class="itens-barra"
+        <a href="./finan.html" class="itens-barra"
           ><svg
             xmlns="http://www.w3.org/2000/svg"
             height="24px"
@@ -89,38 +89,58 @@
     </aside>
 
     <main class="tela-finan">
-      <button>Adicionar Gasto Fixo</button>
+      <div class="topo-finan">
+        <h1>Financeiro</h1>
+        <div class="add-gasto"><button>Adicionar Gasto Fixo</button></div>
+      </div>
 
-      <div class="entrada-valor"><h2>Entrada: 400</h2></div>
-      <div class="Saida-valor"><h2>Saida: 400</h2></div>
-      <div class="total-valores"><h2>Valor Total:10000</h2></div>
-
-      <div class="gastos-fixos">
-        <h3>Gasto Fixo</h3>
-        <div class="gasto-fixo">
-          <img src="" alt="imagem do gasto" />
-          <p class="nome-gasto">gasto-fixo</p>
-          <p class="valor-gasto">valor-gasto</p>
+      <section class="container-finan">
+        <div class="valores">
+          <div class="caixa-valor" id="valor-entrada">
+            <h2>Entrada:</h2>
+            <p>400</p>
+          </div>
+          <div class="caixa-valor" id="valor-saida">
+            <h2>Saída:</h2>
+            <p>400</p>
+          </div>
+          <div class="caixa-valor" id="total-valores">
+            <h2>Valor Total:</h2>
+            <p>10000</p>
+          </div>
         </div>
-      </div>
 
-      <div class="extrato">
-        <h1>Extrato</h1>
-        <table>
-          <thead>
-            <th>Cliente/Fornecedor</th>
-            <th>Venc.</th>
-            <th>Valor</th>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Cliente1</td>
-              <td>venc1</td>
-              <td>valor1</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+        <div class="grid-finan">
+          <div class="gastos-fixos">
+            <h3>Gasto Fixo</h3>
+            <div class="gasto-fixo">
+              <img src="" alt="imagem do gasto" />
+              <p class="nome-gasto">gasto-fixo</p>
+              <p class="valor-gasto">valor-gasto</p>
+            </div>
+          </div>
+
+          <div class="extrato">
+            <h1>Extrato</h1>
+            <table>
+              <thead>
+                <tr>
+                  <th>Cliente/Fornecedor</th>
+                  <th>Venc.</th>
+                  <th>Valor</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Cliente1</td>
+                  <td>venc1</td>
+                  <td>valor1</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
     </main>
   </body>
 </html>
