@@ -223,6 +223,8 @@ main {
   background-color: #4c1d95;
   text-decoration: none;
   color: white;
+  margin-top: 10px;
+  display: inline-block;
 }
 
 .caixa-lead p {
