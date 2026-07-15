@@ -1,11 +1,10 @@
 <!doctype html>
-<html lang="pt-br">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="./assets/image/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <title>Lacerdx</title>
+    <title>Document</title>
   </head>
   <body>
     <!-- Barra Lateral -->
@@ -89,38 +88,49 @@
       </nav>
     </aside>
 
-    <!-- Tela Principal -->
-    <main>
-      <section class="bem-vindo">
-        <h1>Olá Usuario!</h1>
-        <p>Quarta-Feira, 9 de julho</p>
-      </section>
+    <main class="tela-projetos">
+      <div class="topo-projetos">
+        <h1>Projetos</h1>
+        <button>Limpar tudo</button>
+      </div>
 
-      <section class="container-dashboard">
-        <div class="grid-caixas">
-          <div class="caixa-dashboard">
-            <h2>Total Leads</h2>
-            <p>200 teste</p>
+      <div class="tabela-khanbam">
+        <div class="coluna">
+          <div class="cabeca-coluna">
+            <span class="titulo-coluna"
+              >A fazer <span class="indicador-contagem">2</span></span
+            >
           </div>
-
-          <div class="caixa-dashboard">
-            <h2>Total de Projetos</h2>
-            <p>200 teste</p>
+          <div class="cards">
+            <div class="card">Escrever o conteúdo da página inicial</div>
           </div>
-
-          <div class="caixa-dashboard">
-            <h2>Receita mensal</h2>
-            <p>200teste</p>
-          </div>
-
-          <div class="caixa-dashboard">
-            <h2>Tarefas Pendentes</h2>
-            <p>200teste</p>
-          </div>
+          <button class="add-card-btn">+ Adicionar cartão</button>
         </div>
 
-        <div class="grafico-caixa">Gráfico aqui</div>
-      </section>
+        <div class="coluna">
+          <div class="cabeca-coluna">
+            <span class="titulo-coluna"
+              >Em andamento <span class="indicador-contagem">1</span></span
+            >
+          </div>
+          <div class="cards">
+            <div class="card">Configurar domínio</div>
+          </div>
+          <button class="add-card-btn">+ Adicionar cartão</button>
+        </div>
+
+        <div class="coluna">
+          <div class="cabeca-coluna">
+            <span class="titulo-coluna"
+              >Concluído <span class="indicador-contagem">0</span></span
+            >
+          </div>
+          <div class="cards"></div>
+          <button class="add-card-btn">+ Adicionar cartão</button>
+        </div>
+
+        <button class="add-coluna">+ Nova coluna</button>
+      </div>
     </main>
   </body>
 </html>
