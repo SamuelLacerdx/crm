@@ -383,6 +383,21 @@ main {
 
 /* Projetos (Kanban) */
 
+/* Nesta tela a barra lateral vira "overlay": ela sai do fluxo do flex
+   e flutua por cima do conteúdo. Assim, ao abrir 100% no hover, ela não
+   empurra o <main> e o layout do kanban não se mexe. */
+body.pagina-projetos .barra-lateral {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100dvh;
+  z-index: 100;
+}
+
+body.pagina-projetos main {
+  margin-left: 50px;
+}
+
 .tela-projetos {
   display: flex;
   flex-direction: column;
