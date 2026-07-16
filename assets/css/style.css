@@ -526,3 +526,93 @@ body.pagina-projetos main {
 .add-coluna:hover {
   background-color: #faf5ff;
 }
+
+/* Configurações */
+
+.tela-config {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  flex: 1;
+  padding: 15px 20px;
+  gap: 20px;
+}
+
+.topo-config {
+  margin: 0;
+  font-size: 22px;
+  color: #5b21b6;
+}
+
+.config-geral,
+.config-financeiro {
+  background-color: #faf5ff;
+  border: 1px solid #d8b4fe;
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.config-geral > p {
+  margin: 0;
+  font-weight: 600;
+  color: #5b21b6;
+  font-size: 16px;
+}
+.config-financeiro > p {
+  margin: 0;
+  font-weight: 600;
+  color: #5b21b6;
+  font-size: 16px;
+}
+
+.config-geral button,
+.config-financeiro button {
+  background-color: #6d28d9;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  width: fit-content;
+}
+
+#excluir-tudo button {
+  background-color: #dc2626;
+}
+
+#excluir-tudo button:hover {
+  background-color: #b91c1c;
+}
+
+.config-financeiro button:hover {
+  background-color: #5b21b6;
+}
+
+.config-geral > div,
+.config-financeiro > #exportar-financeiro {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+#importar-financeiro {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: fit-content;
+  padding: 10px 15px;
+  border: 1px dashed #c084fc;
+  border-radius: 6px;
+  color: #5b21b6;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#importar-financeiro input[type="file"] {
+  font-size: 13px;
+  max-width: 180px;
+}
