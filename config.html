@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="./assets/image/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/script.js" defer></script>
     <title>Lacerdx-Config</title>
   </head>
   <body>
@@ -93,19 +94,42 @@
      <main class="tela-config">
         <h1 class="topo-config">Configurações</h1>
 
-        <div class="config-geral">
-            <p>Geral</p>
-            <div id="excluir-tudo"><button>Excluir dados</button></div>
+        <!-- Atualização futura -->
+        <!-- <div class="config-perfil">
+            <p>Perfil</p>
+            <div class="perfil-form">
+                <label>Nome de usuário
+                    <input type="text" placeholder="Seu nome de usuário" />
+                </label>
+                <label>Senha atual
+                    <input type="password" placeholder="••••••••" />
+                </label>
+                <label>Nova senha
+                    <input type="password" placeholder="••••••••" />
+                </label>
+                <label>Confirmar nova senha
+                    <input type="password" placeholder="••••••••" />
+                </label>
+            </div>
+            <button>Salvar Alterações</button>
+        </div> -->
+
+        <div class="config-linha">
+            <div class="config-geral">
+                <p>Geral</p>
+                <div id="excluir-tudo"><button>Excluir dados</button></div>
+                <div class="backup-acoes">
+                    <div id="exportar-tudo"><button>Exportar Todos os Dados</button></div>
+                    <div id="importar-tudo"><input type="file">Importar Todos os Dados</div>
+                </div>
+            </div>
+
+            <div class="config-financeiro">
+                <p>Financeiro</p>
+                <div id="exportar-financeiro"><button>Exportar Dados Financeiros</button></div>
+                <div id="importar-financeiro"><input type="file">Importar Dados Financeiros</div>
+            </div>
         </div>
-
-
-        <div class="config-financeiro">
-            <p>Financeiro</p>
-            <div id="exportar-financeiro"><button>Exportar Dados Financeiros</button></div>
-            <div id="importar-financeiro"><input type="file">Importar Dados Financeiros</div>
-        </div>
-
-
 
      </main>
   </body>

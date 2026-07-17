@@ -544,24 +544,33 @@ body.pagina-projetos main {
   color: #5b21b6;
 }
 
+.config-linha {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
 .config-geral,
 .config-financeiro {
+  flex: 1;
+  min-width: 0;
+}
+
+.config-geral,
+.config-financeiro,
+.config-perfil {
   background-color: #faf5ff;
   border: 1px solid #d8b4fe;
   border-radius: 8px;
-  padding: 20px;
+  padding: 15px;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 12px;
 }
 
-.config-geral > p {
-  margin: 0;
-  font-weight: 600;
-  color: #5b21b6;
-  font-size: 16px;
-}
-.config-financeiro > p {
+.config-geral > p,
+.config-financeiro > p,
+.config-perfil > p {
   margin: 0;
   font-weight: 600;
   color: #5b21b6;
@@ -569,7 +578,8 @@ body.pagina-projetos main {
 }
 
 .config-geral button,
-.config-financeiro button {
+.config-financeiro button,
+.config-perfil button {
   background-color: #6d28d9;
   color: #fff;
   border: none;
@@ -592,7 +602,7 @@ body.pagina-projetos main {
   background-color: #5b21b6;
 }
 
-.config-geral > div,
+#excluir-tudo,
 .config-financeiro > #exportar-financeiro {
   display: flex;
   align-items: center;
@@ -613,6 +623,74 @@ body.pagina-projetos main {
 }
 
 #importar-financeiro input[type="file"] {
+  font-size: 13px;
+  max-width: 180px;
+}
+
+/* Feedback das ações de Configurações */
+.config-feedback {
+  font-size: 13px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.config-feedback-sucesso {
+  color: #15803d;
+}
+
+.config-feedback-erro {
+  color: #dc2626;
+}
+
+/* Perfil — formulário (nome de usuário + senha) */
+.perfil-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.perfil-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-width: 320px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #5b21b6;
+}
+
+.perfil-form input {
+  border: 1px solid #e9d5ff;
+  border-radius: 6px;
+  padding: 8px 10px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #333;
+  outline: none;
+}
+
+/* Backup Geral */
+.backup-acoes {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+#importar-tudo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: fit-content;
+  padding: 10px 15px;
+  border: 1px dashed #c084fc;
+  border-radius: 6px;
+  color: #5b21b6;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#importar-tudo input[type="file"] {
   font-size: 13px;
   max-width: 180px;
 }
