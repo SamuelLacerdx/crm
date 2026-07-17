@@ -231,6 +231,61 @@ main {
   margin: 8px 0;
 }
 
+/* Modal - Adicionar Lead */
+
+#criar-lead {
+  border: 1px solid #d8b4fe;
+  border-radius: 8px;
+  padding: 20px;
+  width: 100%;
+  max-width: 320px;
+  background-color: #faf5ff;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin: 0;
+  transform: translate(-50%, -50%);
+}
+
+#criar-lead::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#criar-lead > button {
+  float: right;
+  background-color: #7c3aed;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 2px 8px;
+  cursor: pointer;
+}
+
+#formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+#formulario input {
+  border: 1px solid #e9d5ff;
+  border-radius: 6px;
+  padding: 8px 10px;
+  outline: none;
+}
+
+#formulario button[type="submit"] {
+  background-color: #6d28d9;
+  color: #fff;
+  border: none;
+  padding: 8px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
 /* Financeiro */
 
 .tela-finan {
