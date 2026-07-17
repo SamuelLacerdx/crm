@@ -103,24 +103,24 @@
         </div>
         <div class="add-lead"><button onclick="document.getElementById('criar-lead').showModal()">Adicionar Lead</button></div>
       </div>
-      <section class="container-leads">
-        <div class="caixa-lead" id="inicio-lead">
-          <p class="nome-lead" id="nome-lead">Nome do Lead</p>
-          <p class="cargo-lead" id="cargo-lead">Cargo do Lead</p>
-          <p class="empresa-lead" id="empresa-lead">Empresa do Lead</p>
+      <section class="container-leads" id="inicio-lead">
+        <div class="caixa-lead" >
+          <p class="nome-lead, nome-lead">Nome do Lead</p>
+          <p class="cargo-lead, cargo-lead">Cargo do Lead</p>
+          <p class="empresa-lead, empresa-lead">Empresa do Lead</p>
           <a href="#">Perfil Completo</a>
         </div>
 
-        <dialog id="criar-lead">
-          <button onclick="document.getElementById('criar-lead').close()">X</button>
-          <form id="formulario">
-            <input type="text" id="nome" placeholder="Nome:" required />
-            <input type="text" id="cargo" placeholder="Cargo:" required />
-            <input type="text" id="empresa" placeholder="Empresa:" required />
-            <button type="submit">Cadastrar</button>
-          </form>
-        </dialog>
       </section>
+      <dialog id="criar-lead">
+        <button onclick="document.getElementById('criar-lead').close()">X</button>
+        <form id="formulario">
+          <input type="text" id="nome" placeholder="Nome:" required />
+          <input type="text" id="cargo" placeholder="Cargo:" required />
+          <input type="text" id="empresa" placeholder="Empresa:" required />
+          <button type="submit" onclick="document.getElementById('criar-lead').close()">Cadastrar</button>
+        </form>
+      </dialog>
     </main>
   </body>
 </html>
