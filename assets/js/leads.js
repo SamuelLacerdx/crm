@@ -23,9 +23,10 @@ function salvarDados(lista) {
 
 function atualizarTela() {
   const leads = lerDados();
-  visualizarLead.innerHTML = leads.map(
-    (p) =>
-      `<div class="caixa-lead" id="inicio-lead">
+  visualizarLead.innerHTML = leads
+    .map(
+      (p) =>
+        `<div class="caixa-lead" id="inicio-lead">
       <p class="nome-lead" id="nome-lead">
       Nome:${p.name}
       </p>
@@ -35,9 +36,9 @@ function atualizarTela() {
       <p class="empresa-lead" id="empresa-lead">
       Empresa:${p.empresa}
       </p>
-      <a href="#">Perfil Completo</a>
       </div>`,
-  ).join("");
+    )
+    .join("");
 }
 formulario.addEventListener(`submit`, (e) => {
   e.preventDefault();
@@ -51,9 +52,9 @@ formulario.addEventListener(`submit`, (e) => {
   const lista = lerDados();
   lista.push(novoLead);
 
-  salvarDados(lista)
-  atualizarTela()
-  formulario.reset()
+  salvarDados(lista);
+  atualizarTela();
+  formulario.reset();
 });
 
 atualizarTela();
@@ -61,4 +62,6 @@ atualizarTela();
 // Contador de Leads
 // console.log(lerDados().length)
 
-//  localStorage.clear()
+export function limparLeads() {
+  localStorage.clear();
+}
