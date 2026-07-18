@@ -27,13 +27,13 @@ function atualizarTela() {
     (p) =>
       `<div class="caixa-lead" id="inicio-lead">
       <p class="nome-lead" id="nome-lead">
-      ${p.name}
+      Nome:${p.name}
       </p>
       <p class="cargo-lead" id="cargo-lead">
-      ${p.cargo}
+      Cargo:${p.cargo}
       </p>
       <p class="empresa-lead" id="empresa-lead">
-      ${p.empresa}
+      Empresa:${p.empresa}
       </p>
       <a href="#">Perfil Completo</a>
       </div>`,
