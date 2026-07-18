@@ -58,4 +58,7 @@ formulario.addEventListener(`submit`, (e) => {
 
 atualizarTela();
 
+// Contador de Leads
+// console.log(lerDados().length)
+
 //  localStorage.clear()
