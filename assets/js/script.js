@@ -40,28 +40,54 @@ function atualizarTela() {
     )
     .join("");
 }
-formulario.addEventListener(`submit`, (e) => {
-  e.preventDefault();
 
-  const novoLead = new Lead(
-    document.getElementById("nome").value,
-    document.getElementById("cargo").value,
-    document.getElementById("empresa").value,
-  );
+if (formulario && visualizarLead) {
+  formulario.addEventListener(`submit`, (e) => {
+    e.preventDefault();
 
-  const lista = lerDados();
-  lista.push(novoLead);
+    const novoLead = new Lead(
+      document.getElementById("nome").value,
+      document.getElementById("cargo").value,
+      document.getElementById("empresa").value,
+    );
 
-  salvarDados(lista);
+    const lista = lerDados();
+    lista.push(novoLead);
+
+    salvarDados(lista);
+    atualizarTela();
+    formulario.reset();
+  });
   atualizarTela();
-  formulario.reset();
-});
-
-atualizarTela();
+}
 
 // Contador de Leads
 // console.log(lerDados().length)
 
-export function limparLeads() {
+function limparLeads() {
   localStorage.clear();
+}
+
+// Configurações
+const excluirTudo = document.getElementById("excluir-tudo");
+
+if (excluirTudo) {
+  excluirTudo.addEventListener("click", (e) => {
+    mostrarConfirmacao();
+  });
+}
+
+function mostrarConfirmacao() {
+  let resposta = confirm(
+    "Tem certeza que deseja excluir sua conta? Esta ação não pode ser desfeita.",
+  );
+
+  if (resposta) {
+    // Código que roda se o usuário clicar em "OK"
+    limparLeads();
+    alert("Conteudo excluído com sucesso!");
+  } else {
+    // Código que roda se o usuário clicar em "Cancelar"
+    alert("Ação cancelada pelo usuário.");
+  }
 }

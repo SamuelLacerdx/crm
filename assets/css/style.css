@@ -645,11 +645,11 @@ body.pagina-projetos main {
   width: fit-content;
 }
 
-#excluir-tudo button {
+#excluir-tudo {
   background-color: #dc2626;
 }
 
-#excluir-tudo button:hover {
+#excluir-tudo:hover {
   background-color: #b91c1c;
 }
 
