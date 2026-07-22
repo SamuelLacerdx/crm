@@ -70,11 +70,18 @@ function limparLeads() {
 
 // Configurações
 const excluirTudo = document.getElementById("excluir-tudo");
+const exportarTudo = document.getElementById("exportar-tudo");
+const importarTudo = document.getElementById("importar-tudo");
 
-if (excluirTudo) {
+if (excluirTudo && exportarTudo) {
   excluirTudo.addEventListener("click", (e) => {
     mostrarConfirmacao();
+  
+  })
+  exportarTudo.addEventListener("click", (e) =>{
+    exportarJson()
   });
+
 }
 
 function mostrarConfirmacao() {
@@ -83,11 +90,28 @@ function mostrarConfirmacao() {
   );
 
   if (resposta) {
-    // Código que roda se o usuário clicar em "OK"
     limparLeads();
     alert("Conteudo excluído com sucesso!");
   } else {
-    // Código que roda se o usuário clicar em "Cancelar"
     alert("Ação cancelada pelo usuário.");
   }
+}
+
+function exportarJson() {
+  const leads = lerDados();
+
+  if (leads.length === 0) {
+    alert("Não a dados para exportar");
+  }
+    const blob = new Blob([JSON.stringify(leads, null, 2)], {
+    type: "application/json",
+  });
+  const url = URL.createObjectURL(blob);
+
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = `leads-${new Date().toISOString().slice(0, 10)}.json`;
+  link.click();
+
+  URL.revokeObjectURL(url);
 }
